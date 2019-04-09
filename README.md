@@ -14,9 +14,7 @@ Barbara like movies
 Gio doesn't fancy hanging out in town
 ```
 Just copy the little story written above and past into the editor to have it correlated into a graph:
-
 ![](https://github.com/PresidentWarfield/SuVeOb/blob/master/img/who_will_hang-out_with_barbara.png)
-
 https://github.com/PresidentWarfield/SuVeOb/blob/master/img/who_will_hang-out_with_barbara.png
 
 ---
