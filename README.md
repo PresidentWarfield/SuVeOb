@@ -16,5 +16,5 @@ Gio doesn't fancy hanging out in town
 Just copy the little story written above and past into the editor to have it correlated into a graph:
 
 ![](/img/who_will_hang-out_with_barbara.png)
----
-**[Try it yourself](SuVeOb.html)**
+
+**[Try it yourself](https://presidentwarfield.github.io/SuVeOb/SuVeOb.html)**
