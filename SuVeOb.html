@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript" src="lib/d3.v3.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="lib/graph-diagram.js"></script>
+    <link rel="stylesheet" href="style/graph-diagram.css" type="text/css">
+    <link rel="stylesheet" href="style/graph-style-bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="lib/bootstrap.css" type="text/css">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <!-- Graph Generation Script -->
+    <script type="text/javascript" src="script/genGraph.js"></script>
+
+    <title>SuVeOb [Subject --> Verbal predicate --> Object complement] to Graph</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Pseudo-Natural Language Correlator</h1>
+        <br>
+        <br>
+        Please write your <b>subject, verbal predicate and object complement</b> statement(s) below.
+        System will generate correlations based on equivalents subject and object complements:
+        <br>
+        <br>
+        <table>
+            <tr>
+                <td width=70%>
+                    <form onsubmit="graphIt(document.getElementById('inputText').value); return false;" id="textForm">
+                        <textarea rows="20" form="textForm" id="inputText">
+46.101.110.134 > "Vulnerable" : "https://www.shodan.io/host/46.101.110.134"
+sio.exodus.connexxa.it > "Maybe" : "https://it.linkedin.com/company/sio-s.p.a."
+rt.exodus.connexxa.it > "Maybe" : "https://it.linkedin.com/company/rt-radio-trevisan-spa"
+area.exodus.connexxa.it > "Maybe" : "https://it.linkedin.com/company/area"
+rcs.exodus.connexxa.it > "Maybe" : "https://it.linkedin.com/company/rcs-s.p.a."
+
+connexxalife.it has correlation with Connexxa_srl
+esurv.it has correlation with Connexxa_srl
+46.101.110.134 has correlation with esurv.it
+46.101.110.134 has correlation with Connexxa_srl
+sio.exodus.connexxa.it has correlation with connexxa.it
+area.exodus.connexxa.it has correlation with connexxa.it
+smtp.connexxa.it has correlation with connexxa.it
+mail.connexxa.it has correlation with connexxa.it
+46.101.110.134 has correlation with connexxa.it
+46.101.110.134 has correlation with connexxalife.it
+rt.exodus.connexxa.it has correlation with connexxa.it
+rcs.exodus.connexxa.it has correlation with connexxa.it
+connexxa.it has correlation with connexxalife.it
+connexxa.it has correlation with Connexxa_srl
+                        </textarea>
+                        <br>
+                        <button>Generate Graph</button>
+                        &NonBreakingSpace;Click again to optimize view
+                    </form>
+                </td>
+                <td>
+                    <form>
+                        Node Offset (drives the distance between nodes):
+                        <br>
+                        <input type="text" id="offset" value="250">
+                        <br>
+                        <br> Max Canvas Width (expressed in pixels):
+                        <br>
+                        <input type="text" id="maxWidth" value="500">
+                        <br> Max Canvas Height (expressed in pixels):
+                        <br>
+                        <input type="text" id="maxHeight" value="500">
+                        <br>
+                        <br> Relationship Type Delimiter (space by default):
+                        <br>
+                        <input type="text" id="relD" value=" ">
+                        <br>
+                        <br> Properties Delimiter (> by default):
+                        <br>
+                        <input type="text" id="propD" value=">">
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="container">
+        <h2>Generated Graph :</h2>
+        <div id="dynamicGraphDiv">
+            <p id="dynamicGraph"></p>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        d3.selectAll("figure.graph-diagram")
+            .call(gd.figure());
+    </script>
+
+</body>
+
+</html>
