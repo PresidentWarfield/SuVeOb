@@ -17,6 +17,8 @@ Just copy the little story written above and paste it into the editor to have it
 
 ![](/img/who_will_hang-out_with_barbara.png)
 
+More examples in the notes and mindmaps **[repository](https://github.com/PresidentWarfield/SuVeOb_Investigations)**
+
 **[Try it yourself](https://presidentwarfield.github.io/SuVeOb/SuVeOb.html)**
 ---
 https://presidentwarfield.github.io/SuVeOb/
